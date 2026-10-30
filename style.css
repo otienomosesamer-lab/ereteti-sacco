@@ -1,0 +1,305 @@
+/* House style — main #176B3A, ground #F7F3E8, ink #262626, accent #B8860B;
+   headings: Georgia, serif; body: Arial, sans-serif. */
+
+:root {
+  --main: #176b3a;
+  --ground: #f7f3e8;
+  --ink: #262626;
+  --accent: #b8860b;
+  --heading-font: Georgia, serif;
+  --body-font: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: min(100%, 80rem);
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+.site-header {
+  min-width: 0;
+}
+
+.brand {
+  padding: 1.5rem clamp(1rem, 4vw, 3rem);
+  background: var(--main);
+  color: var(--ground);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+}
+
+.brand p {
+  margin: 0;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  padding: 0.65rem clamp(0.5rem, 3vw, 2rem);
+  background: var(--ink);
+}
+
+.page-content {
+  display: grid;
+  grid-template-areas: "content sidebar";
+  grid-template-columns: minmax(0, 2fr) minmax(15rem, 1fr);
+  gap: 0 1.5rem;
+}
+
+nav a {
+  display: block;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.2rem;
+  color: var(--ground);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] {
+  background: var(--main);
+  color: var(--ground);
+}
+
+main {
+  grid-area: content;
+  min-width: 0;
+  padding: 1.5rem 0 2rem 1.5rem;
+}
+
+main h2 {
+  margin: 0 0 0.8rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.35rem;
+}
+
+main h2:not(:first-child) {
+  margin-top: 1.75rem;
+}
+
+aside {
+  grid-area: sidebar;
+  align-self: start;
+  min-width: 0;
+  margin: 1.5rem 1.5rem 1.5rem 0;
+  border-left: 4px solid var(--accent);
+  padding: 1rem;
+  background: #fffdf8;
+}
+
+aside h2 {
+  margin-top: 0;
+}
+
+a {
+  color: var(--main);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  flex: 1 1 12rem;
+  min-width: 0;
+  border-top: 4px solid var(--accent);
+  padding: 1rem;
+  background: #fffdf8;
+}
+
+.card a {
+  font-weight: bold;
+}
+
+.route-card h3 {
+  margin-top: 0;
+  color: var(--main);
+}
+
+.route-card ul {
+  padding-left: 1.25rem;
+}
+
+.image-cards img {
+  flex: 1 1 16rem;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+main > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--accent);
+  padding: 0.5rem 1rem;
+  background: #fffdf8;
+}
+
+blockquote p {
+  margin-top: 0;
+}
+
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #d6d1c5;
+}
+
+.table-scroll:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+table {
+  width: 100%;
+  min-width: 38rem;
+  border-collapse: collapse;
+  background: #fffdf8;
+  text-align: left;
+}
+
+caption {
+  padding: 0.75rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+th,
+td {
+  border-top: 1px solid #d6d1c5;
+  padding: 0.65rem;
+}
+
+thead,
+tfoot {
+  background: var(--main);
+  color: var(--ground);
+}
+
+tbody tr:nth-child(even) {
+  background: #f0ede4;
+}
+
+form {
+  max-width: 38rem;
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.4rem;
+  margin: 1rem 0;
+  border: 1px solid #aaa393;
+  padding: 1rem;
+}
+
+legend {
+  padding: 0 0.35rem;
+  font-weight: bold;
+}
+
+input,
+select,
+button {
+  max-width: 100%;
+  min-height: 2.5rem;
+  border: 1px solid #777;
+  border-radius: 0.2rem;
+  padding: 0.45rem 0.6rem;
+  font: inherit;
+}
+
+input[type="checkbox"] {
+  min-height: auto;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+button {
+  border-color: var(--main);
+  background: var(--main);
+  color: var(--ground);
+  cursor: pointer;
+}
+
+.contact-list {
+  padding-left: 1.25rem;
+}
+
+.site-footer {
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  background: var(--main);
+  color: var(--ground);
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 700px) {
+  .page-content {
+    grid-template-areas:
+      "content"
+      "sidebar";
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  nav {
+    gap: 0.25rem;
+    padding: 0.5rem;
+  }
+
+  nav a {
+    padding: 0.35rem 0.5rem;
+  }
+
+  main {
+    padding: 1.25rem 1rem;
+  }
+
+  aside {
+    margin: 0 1rem 1.25rem;
+  }
+
+  .card {
+    flex-basis: 100%;
+  }
+}
