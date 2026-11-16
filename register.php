@@ -1,31 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply for membership - Ereteti Dairy Sacco</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
-    <header class="site-header">
-        <div class="brand">
-            <h1>Apply for membership</h1>
-            <p>Milk collected twice a day, on three routes out of Ngong.</p>
-        </div>
-    </header>
-    <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="routes.html">Our routes</a>
-        <a href="contact.html">Contact</a>
-        <a href="register.html" aria-current="page">Join</a>
-        <a href="deliveries.html">Deliveries</a>
-    </nav>
+<?php
+$page_title = 'Apply for membership';
+include 'includes/header.php';
+?>
     <div class="page-content">
     <main>
         <h2>Join Ereteti Dairy Sacco</h2>
         <p>Any dairy farmer within reach of one of our three routes may apply to join Ereteti. You will need your national ID number and a phone we can reach you on. Once your membership number is issued you may deliver from that day, and you are paid once a month for the litres we accept.</p>
-        <form action="#" method="get">
+        <form action="process-register.php" method="post">
             <fieldset>
                 <legend>Your details</legend>
                 <label for="fname">First name</label>
@@ -56,15 +37,4 @@
             <button type="submit">Apply to join</button>
         </form>
     </main>
-    <aside>
-        <h2>Before you apply</h2>
-        <p>Choose the collection route closest to your farm. You will need a national ID, a reachable phone number, and a bank account for monthly payments.</p>
-        <p><a href="routes.html">Review the routes and centres</a></p>
-    </aside>
-    </div>
-    <footer class="site-footer">
-        <p>Ereteti Dairy Sacco, PO Box 4021, Ngong.</p>
-        <p>Site built by Nicholas Barasa, DBIT Year 1, 2026.</p>
-    </footer>
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>

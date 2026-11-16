@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deliveries - Ereteti Dairy Sacco</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
-    <header class="site-header">
-        <div class="brand">
-            <h1>Deliveries</h1>
-            <p>Milk collected twice a day, on three routes out of Ngong.</p>
-        </div>
-    </header>
-    <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="routes.html">Our routes</a>
-        <a href="contact.html">Contact</a>
-        <a href="register.html">Join</a>
-        <a href="deliveries.html" aria-current="page">Deliveries</a>
-    </nav>
+<?php
+$page_title = 'Deliveries';
+include 'includes/header.php';
+?>
     <div class="page-content">
     <main>
         <h2>Milk received at Olepolos centre</h2>
@@ -66,15 +47,4 @@
             </table>
         </section>
     </main>
-    <aside>
-        <h2>Collection sessions</h2>
-        <p>Morning collection starts at 6.30am. Evening collection starts at 4.00pm at Olepolos centre.</p>
-        <p><a href="routes.html#kiserian">See all Kiserian collection centres</a></p>
-    </aside>
-    </div>
-    <footer class="site-footer">
-        <p>Ereteti Dairy Sacco, PO Box 4021, Ngong.</p>
-        <p>Site built by Nicholas Barasa, DBIT Year 1, 2026.</p>
-    </footer>
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>
